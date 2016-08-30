@@ -1,0 +1,22 @@
+<ion-view view-title="MY TODO List">
+  <ion-content>
+
+  <div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" ng ng-model="search" placeholder="Search">
+  </label>
+</div>
+<div>
+    <ion-list>
+      <ion-item ng-repeat="list in fromStorage | filter:search |filter:{completeOn:null}">
+        {{list.content}}
+        <ion-option-button class="button-positive" ng-click="update(list)"> Close List</ion-option-button>
+      </ion-item> 
+    </ion-list>
+  </div>
+  <button class="button button-block button-positive" ng-click="TODOshow()">
+  Add TODO List
+</button>
+</ion-content>
+</ion-view>

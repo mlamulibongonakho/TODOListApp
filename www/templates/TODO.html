@@ -1,0 +1,21 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">TODO LIST</h1>
+    <div class="buttons">
+      <button class="button button-clear"  ng-click="closeTODO()"><i class="ion-ios-close-outline"></button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form>
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">My TODO List : max:60 characters</span>
+          <input type="text" ng-model="TODOdata.Todolist" placeholder="Enter Your TODO List Here" maxlength="60">  
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit" ng-click="submitTodoList()">Submit</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>
